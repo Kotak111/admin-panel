@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="../jquery.js"></script> -->
+    <script src=""></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="sidebar">
+        <ul>
+            <li><a href="dash.html">Dash Borad</a></li>
+            <li><a href="user.html">Usres</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="review.html">review</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+
+        <div id="sidebar-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <div class="love">
+        <div class="container">
+            <div class="row">
+                <div class="col-9  ">
+                    <form action="">
+                        <input type="search" name="" id="" class="form-control w-25 mt-4 ou " placeholder="search here">
+                    </form>
+                </div>
+
+                <div class="col-3 ">
+
+                    <div class="hold">
+                        <div> <i class="fa-solid fa-bell im-1 mt-4 "></i></div>
+                        <div><img src="img/harsh.jpeg" alt="" class="img-fluid im mt-3"></div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- user detils start -->
+            <h2 class="text-center text-dark mt-5 ou">Universal Library Users</h2>
+
+
+            <table class="table mt-5 border border-2">
+                <th>Id</th>
+                <th>Name</th>
+                <th>image</th>
+                <th>mobile</th>
+                <th>city</th>
+                <th>update</th>
+                <th>delete</th>
+                <tr>
+                    <td>1</td>
+                    <td>harsh</td>
+                    <td><img src="img/Max-R_Headshot (1).jpg" alt="" class="img-fluid"></td>
+                    <td>9824292374</td>
+                    <td>Mendarda</td>
+                    <td><button class="btn btn-primary text-white">Update</button></td>
+                    <td><button class="btn btn-danger text-white">delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>priyanshu</td>
+                    <td><img src="img/Max-R_Headshot (1).jpg" alt="" class="img-fluid"></td>
+                    <td>1234567890</td>
+                    <td>ahmedabad</td>
+                    <td><button class="btn btn-primary text-white">Update</button></td>
+                    <td><button class="btn btn-danger text-white">delete</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>sailesh</td>
+                    <td><img src="img/Max-R_Headshot (1).jpg" alt="" class="img-fluid"></td>
+                    <td>9876543210</td>
+                    <td>ahmedabad</td>
+                    <td><button class="btn btn-primary text-white">Update</button></td>
+                    <td><button class="btn btn-danger text-white">delete</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>tanisha</td>
+                    <td><img src="img/girl.jpg" alt="" class="img-fluid io"></td>
+                    <td>7418529630</td>
+                    <td>ahmedabad</td>
+                    <td><button class="btn btn-primary text-white">Update</button></td>
+                    <td><button class="btn btn-danger text-white">delete</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>jay</td>
+                    <td><img src="img/Max-R_Headshot (1).jpg" alt="" class="img-fluid"></td>
+                    <td>9638527410</td>
+                    <td>ahmedabad</td>
+                    <td><button class="btn btn-primary text-white">Update</button></td>
+                    <td><button class="btn btn-danger text-white">delete</button></td>
+                </tr>
+
+            </table>
+            <!-- user details end -->
+            <!-- footer start -->
+      <div class="foot-main">
+        <h2>CopyRightBy: Harsh Kotak</h2>
+      </div>
+      <!-- footer end -->
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $('#sidebar-btn').on('click', function () {
+            $('#sidebar').toggleClass('visible');
+        });
+    });
+</script>

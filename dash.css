@@ -1,0 +1,226 @@
+html,
+body {
+  height: 100%; margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+#sidebar {
+  width: 200px;
+  background: #2c3e50;
+  position: absolute;
+  height: 200%;
+  top: 0;
+  left: -200px;
+  transition: left 0.5s ease;
+}
+
+#sidebar.visible {
+  left: 0px;
+  transition: left 0.7s ease;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 10px 0 10px 10px;
+  background: #46637F;
+  border-bottom: 1px solid #233140;
+}
+li a:hover{
+    color: cyan;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+#sidebar-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  margin: 20px;
+  position: absolute;
+  right: -60px;
+  top: 0px;
+}
+
+#sidebar-btn span {
+  background-color: red;
+  height: 1px;
+  display: block;
+  margin-bottom: 5px;
+  
+}
+
+#sidebar-btn span:nth-child(2) {
+  width: 75%;
+}
+
+.love {
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+/* serch bar start */
+.ou{
+    margin-left: 18%;
+}
+.im{
+    height: 40px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: -35%;
+}
+.im-1{
+    height: 40px;
+    width: 60px;
+    color: black!important;
+    font-size: 30px;
+}
+.hold{
+    display: flex;
+    margin-left: 65%;
+}
+
+/* serch bar end */
+
+/* user part start */
+h2{
+    font-family: one;
+    font-weight: bold;
+}
+@font-face {
+    font-family: one;
+    src: url(hey_comic/More\ Info.txt);
+}
+table{
+    margin-left: 15%;
+    width: 85%!important;
+}
+table img{
+  height: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+.io{
+  height: 40px;
+  width: 50px;
+  border-radius: 50%;
+}
+/* user part end */
+
+
+/* books part start */
+.books{
+    margin: auto!important;
+}
+.add-main{
+ 
+  height: auto;
+  width: 300px;
+  margin: auto!important;
+  margin-top: 1%!important;
+}
+.lt{
+ font-size: 20px;
+  color: red;
+}
+.b-p{
+  margin-left: 20%!important;
+}
+/* books part end */
+
+/* location part start */
+.lo-main{
+  /* border: 2px solid red; */
+  height: 390px;
+  width: 90%;
+  margin-left: 10%;
+  margin-top: 8%;
+  
+}
+.lo-main-1{
+    /* border: 2px solid black; */
+    height: 180px;
+    width: 100%;
+    
+}
+.lo-main-1 button{
+  gap: 20px;
+  margin-left: 70px;
+  margin-top: 25px;
+}
+/* location part end */
+
+
+/* dash bord css */
+.main-dash{
+  /* border: 2px solid red; */
+  margin: auto;
+  width: 90%;
+  height: auto;
+  margin-left: 12%;
+  margin-top: 5%;
+  display: flex;
+  gap: 40px;
+}
+.main-div-part{
+ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: auto;
+  width: 50%;
+  gap: 20px;
+
+}
+.pro-main{
+  width: 90%;
+  margin-left: 12%;
+  margin-top: 7%;
+  height: auto;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+.progress{
+  margin-top: 2%;
+}
+.pro-main h4{
+  font-weight: bold;
+ margin-top: 13px;
+}
+.cal-main{
+  width: 80%;
+  margin-left: 12%;
+  border: 2px solid red;
+}
+/* dash bord css end */
+
+/* footer start */
+.foot-main{
+  /* border: 2px solid red; */
+  background-color: black;
+  color: white;
+  margin-left: 10%;
+  text-align: center;
+  margin-top: 34%;
+  width: 95%;
+  padding: 10px;
+}
+.foot-main h2{
+  font-family: cursive;
+}
+/* footer end */

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="../jquery.js"></script> -->
+  <script src=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="dash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    #chart {
+      max-width: 650px;
+      margin: 35px auto;
+      padding: 0;
+    }
+  </style>
+
+  <script>
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/eligrey-classlist-js-polyfill@1.2.20171210/classList.min.js"><\/script>'
+      )
+    window.Promise ||
+      document.write(
+        '<script src="https://cdn.jsdelivr.net/npm/findindex_polyfill_mdn"><\/script>'
+      )
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/react@16.12/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@16.12/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prop-types@15.7.2/prop-types.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-apexcharts@1.3.6/dist/react-apexcharts.iife.min.js"></script>
+
+
+  <script>
+    // Replace Math.random() with a pseudo-random number generator to get reproducible results in e2e tests
+    // Based on https://gist.github.com/blixt/f17b47c62508be59987b
+    var _seed = 42;
+    Math.random = function () {
+      _seed = _seed * 16807 % 2147483647;
+      return (_seed - 1) / 2147483646;
+    };
+  </script>
+
+
+</head>
+
+<body>
+  <div id="sidebar">
+    <ul>
+      <li><a href="dash.html">Dash Borad</a></li>
+      <li><a href="user.html">Usres</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="location.html">Location</a></li>
+      <li><a href="review.html">review</a></li>
+      <li><a href="login.html">Logout</a></li>
+    </ul>
+
+    <div id="sidebar-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </div>
+
+  <div class="love">
+    <div class="container">
+      <div class="row">
+        <div class="col-9  ">
+          <form action="">
+            <input type="search" name="" id="" class="form-control w-25 mt-4 ou " placeholder="search here">
+          </form>
+        </div>
+
+        <div class="col-3 ">
+
+          <div class="hold">
+            <div> <i class="fa-solid fa-bell im-1 mt-4 "></i></div>
+            <div><img src="img/harsh.jpeg" alt="" class="img-fluid im mt-3"></div>
+          </div>
+        </div>
+
+        <div class="main-dash">
+          <div class="main-div-part">
+            <div id="app"></div>
+
+            <div id="html">
+
+            </div>
+
+            <script type="text/babel">
+              class ApexChart extends React.Component {
+                constructor(props) {
+                  super(props);
+
+                  this.state = {
+
+                    series: [{
+                      name: "Desktops",
+                      data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+                    }],
+                    options: {
+                      chart: {
+                        height: 350,
+                        type: 'line',
+                        zoom: {
+                          enabled: false
+                        }
+                      },
+                      dataLabels: {
+                        enabled: false
+                      },
+                      stroke: {
+                        curve: 'straight'
+                      },
+                      title: {
+                        text: 'Product Trends by Month',
+                        align: 'left'
+                      },
+                      grid: {
+                        row: {
+                          colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                          opacity: 0.5
+                        },
+                      },
+                      xaxis: {
+                        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+                      }
+                    },
+
+
+                  };
+                }
+
+
+
+                render() {
+                  return (
+                    <div>
+                      <div id="chart">
+                        <ReactApexChart options={this.state.options} series={this.state.series} type="line" height={350} />
+                      </div>
+                      <div id="html-dist"></div>
+                    </div>
+                  );
+                }
+              }
+
+              const domContainer = document.querySelector('#app');
+              ReactDOM.render(React.createElement(ApexChart), domContainer);
+            </script>
+
+          </div>
+          <div class="main-div-part">
+            <div id="app1"></div>
+
+           
+        
+            <script type="text/babel">
+              class ApexChart extends React.Component {
+                constructor(props) {
+                  super(props);
+        
+                  this.state = {
+                  
+                    series: [44, 55, 13, 43, 22],
+                    options: {
+                      chart: {
+                        width: 380,
+                        type: 'pie',
+                      },
+                      labels: ['surat', 'ahmedabad', 'mendarda', 'rajkot', 'junagadh'],
+                      responsive: [{
+                        breakpoint: 480,
+                        options: {
+                          chart: {
+                            width: 200
+                          },
+                          legend: {
+                            position: 'bottom'
+                          }
+                        }
+                      }]
+                    },
+                  
+                  
+                  };
+                }
+        
+              
+        
+                render() {
+                  return (
+                    <div>
+                      <div id="chart">
+                        <ReactApexChart options={this.state.options} series={this.state.series} type="pie" width={380} />
+                      </div>
+                      <div id="html-dist"></div>
+                    </div>
+                  );
+                }
+              }
+        
+              const domContainer = document.querySelector('#app1');
+              ReactDOM.render(React.createElement(ApexChart), domContainer);
+            </script>
+        
+          </div>
+
+
+
+            
+        </div>
+        <!-- progress bar start -->
+        <div class="pro-main">
+          <h4>users</h4>
+          <div class="progress">
+            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >100%</div>
+          </div>
+          <h4>product selling</h4>
+          <div class="progress">
+            <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+          <h4>customer support</h4>
+          <div class="progress">
+            <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">100%</div>
+          </div>
+          <h4>product review</h4>
+          <div class="progress">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+        <!-- progress bar end -->
+      </div>
+
+
+      <!-- celender start -->
+      <div class="cal-main">
+        
+      </div>
+      <!-- clender end -->
+
+      <!-- footer start -->
+      <div class="foot-main">
+        <h2>CopyRightBy: Harsh Kotak</h2>
+      </div>
+      <!-- footer end -->
+
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+    $('#sidebar-btn').on('click', function () {
+      $('#sidebar').toggleClass('visible');
+    });
+  });
+</script>

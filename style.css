@@ -1,0 +1,40 @@
+
+@media only  screen and (min-width:1400px){
+    *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+    }
+    body{
+     background-color: aqua!important;
+     
+      
+    }
+   
+    .main{
+        width: 400px;
+        height: 400px;
+        background-color: black;
+        margin: auto!important;
+        margin-top: 10%!important;
+        border-radius: 20%;
+
+    }
+    .in-1{
+        font-weight: bold;
+        font-size: 27px;
+        font-family: cursive;
+        margin-left: 40%;
+    }
+    .in-2{
+        font-weight: bold;
+        font-size: 27px;
+        font-family: cursive;
+        margin-left: 35%;
+    }
+    .logn{
+        margin: auto!important;
+        margin-left: 25%!important;
+
+    }
+}
